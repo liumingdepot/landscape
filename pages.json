@@ -1,0 +1,126 @@
+{
+	"pages": [{
+			"path": "pages/home/home",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "white",
+				"app-plus": {
+					// 将回弹属性关掉
+					"bounce": "none"
+				}
+			}
+		}, {
+			"path": "pages/computer/computer",
+			"style": {
+				"navigationBarTitleText": "一项一档",
+				"app-plus": {
+					// 将回弹属性关掉
+					"bounce": "none"
+				}
+			}
+		}, {
+			"path": "pages/dataService/dataService",
+			"style": {
+				"navigationBarTitleText": "数据服务",
+				"app-plus": {
+					// 将回弹属性关掉
+					"bounce": "none"
+				}
+			}
+		}, {
+			"path": "pages/map/map",
+			"style": {
+				"app-plus": {
+					// 将回弹属性关掉
+					"bounce": "none",
+					"nvueCompiler":"uni-app"
+				}
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"app-plus": {
+					// 将回弹属性关掉
+					"bounce": "none"
+				}
+			}
+		}, {
+			"path": "pages/computer-Item/computer-Item",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "black",
+				"app-plus": {
+					// 将回弹属性关掉
+					"bounce": "none"
+				}
+			}
+		}, {
+			"path": "pages/home-Item/home-Item",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "black",
+				"app-plus": {
+					// 将回弹属性关掉
+					"bounce": "none"
+				}
+			}
+		}, {
+			"path": "pages/dataService-aql/dataService-aql",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "black",
+				"app-plus": {
+					// 将回弹属性关掉
+					"bounce": "none"
+				}
+			}
+		}, {
+			"path": "pages/dataService-pollution/dataService-pollution",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTextStyle": "black",
+				"app-plus": {
+					// 将回弹属性关掉
+					"bounce": "none"
+				}
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#0286dd"
+	},
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#5ebaf7",
+		"borderStyle": "white",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/home/home",
+				"iconPath": "static/tabBar/a2.png",
+				"selectedIconPath": "static/tabBar/a1.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/computer/computer",
+				"iconPath": "static/tabBar/b2.png",
+				"selectedIconPath": "static/tabBar/b1.png",
+				"text": "一项一档"
+			},
+			{
+				"pagePath": "pages/dataService/dataService",
+				"iconPath": "static/tabBar/c2.png",
+				"selectedIconPath": "static/tabBar/c1.png",
+				"text": "数据服务"
+			},
+			{
+				"pagePath": "pages/map/map",
+				"iconPath": "static/tabBar/d2.png",
+				"selectedIconPath": "static/tabBar/d1.png",
+				"text": "在线地图"
+			}
+		]
+	}
+}

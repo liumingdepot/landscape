@@ -1,0 +1,41 @@
+<template>
+	<view class="map" :style="{height: windowHeight + 'px',width:windowWidth+'px'}">
+		<map :style="{height: windowHeight + 'px',width:windowWidth+'px'}" show-compass @callouttap="markertap"
+		 :latitude="latitude" :longitude="longitude" :scale="scale" :markers="markers" @tap="aaatap"></map>
+	</view>
+</template>
+
+<script>
+
+	export default {
+		data() {
+			return {
+				windowHeight: 0,
+				windowWidth: 0,
+				latitude: 34.98275281869196,
+				longitude: 108.92120361328125,
+				scale: 11,
+				markers: []
+			};
+		},
+		onLoad() {
+			const info = uni.getSystemInfoSync()
+			this.windowHeight = info.windowHeight
+			this.windowWidth = info.windowWidth
+			const markers = uni.getStorageSync('markers');
+			this.markers = JSON.parse(markers)
+		},
+		methods: {
+			aaatap(e){
+				console.log(e);
+			},
+			markertap(e) {
+				uni.navigateTo({
+					url: `/pages/computer-Item/computer-Item?id=${e.detail.markerId}`,
+					animationType: 'slide-in-right',
+					animationDuration: 0
+				})
+			}
+		}
+	}
+</script>

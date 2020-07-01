@@ -26,3 +26,15 @@ export const get = async ({ allurl, url, data }) => {
 	}
 	return res.data
 }
+
+export const post = async ({ allurl, url, data }) => {
+	const [err, res] = await axios({
+		method: 'post',
+		url: url ? apiUrl + url : allurl,
+		data
+	})
+	if (err) {
+		return err
+	}
+	return res.data
+}

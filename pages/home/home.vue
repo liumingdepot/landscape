@@ -72,30 +72,18 @@
 				<progress :percent="85.5" activeColor="#87c6ef" stroke-width="4" />
 			</view>
 		</view>
-		<uni-popup ref="popup" type="center" :maskClick="false">
-			<view class="login">
-				<view class="item">
-					<view class="title">用户名</view>
-					<input type="text" placeholder-class="input" v-model="username" placeholder="请输入用户名" />
-				</view>
-				<view class="item">
-					<view class="title">密码</view>
-					<input type="password" placeholder-class="input" v-model="password" placeholder="请输入密码" />
-				</view>
-				<view class="primary" @tap="applogin">登录</view>
-			</view>
-		</uni-popup>
 	</view>
 </template>
 
 <script>
 	import {
 		getAppindexdataShow,
-		Applogin
 	} from './server.js'
 	export default {
 		data() {
 			return {
+				username:'',
+				password:'',
 				xmdata: {},
 				flData: {
 					fqksData: {
@@ -126,15 +114,6 @@
 			this.xmdata = data.xmdata
 			this.flData = data.flData
 		},
-		onHide() {
-			const token = uni.getStorageSync('token');
-			if (!token) {
-				uni.switchTab({
-					url: '/pages/home/home'
-				});
-				this.$refs.popup.open()
-			}
-		},
 		methods: {
 			goTohomeItem(title, id) {
 				uni.navigateTo({
@@ -142,27 +121,7 @@
 					animationType: 'slide-in-right',
 					animationDuration: 200
 				})
-			},
-			applogin() {
-				Applogin({
-					username: this.username,
-					password: this.password
-				}).then(res => {
-					if(res.code == 0){
-						uni.showToast({
-							title:'登录成功',
-							icon:'none'
-						})
-						uni.setStorageSync('token',res.token)
-						this.$refs.popup.close()
-					}else{
-						uni.showToast({
-							title:res.msg,
-							icon:'none'
-						})
-					}
-				})
-			},
+			}
 		}
 	}
 </script>
@@ -265,31 +224,6 @@
 						color: #999999;
 					}
 				}
-			}
-		}
-
-		.login {
-			width: 600rpx;
-			background-color: #ffffff;
-			border-radius: 10rpx;
-
-			.item {
-				display: flex;
-				align-items: center;
-				border-bottom: 2rpx solid #e5e5e5;
-
-				.title {
-					width: 4em;
-				}
-			}
-
-			.primary {
-				width: 100%;
-				line-height: 80rpx;
-				text-align: center;
-				background-color: #3a9edf;
-				border-radius: 0 0 10rpx 10rpx;
-				color: #fff;
 			}
 		}
 	}

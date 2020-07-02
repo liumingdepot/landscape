@@ -27,6 +27,7 @@
 			})
 			uni.setStorageSync('markers', markers);
 		},
+		
 	}
 </script>
 

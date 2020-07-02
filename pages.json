@@ -1,5 +1,10 @@
 {
 	"pages": [{
+			"path": "pages/login/login",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		}, {
 			"path": "pages/home/home",
 			"style": {
 				"navigationStyle": "custom",
@@ -33,7 +38,7 @@
 				"app-plus": {
 					// 将回弹属性关掉
 					"bounce": "none",
-					"nvueCompiler":"uni-app"
+					"nvueCompiler": "uni-app"
 				}
 			}
 		},
@@ -86,6 +91,7 @@
 				}
 			}
 		}
+
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",

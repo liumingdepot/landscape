@@ -1,7 +1,6 @@
 <script>
 	import {get} from '@/common/axios.js'
 	export default {
-		onLaunch() {},
 		async onShow() {
 			const res = await get({
 				url:'commonservice-system/swagger2/say/queryAppProjectlist_new',
@@ -26,9 +25,8 @@
 					}
 				}
 			})
-			uni.setStorageSync('markers', JSON.stringify(markers) );
+			uni.setStorageSync('markers', markers);
 		},
-		onHide() {}
 	}
 </script>
 

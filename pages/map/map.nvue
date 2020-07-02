@@ -22,8 +22,7 @@
 			const info = uni.getSystemInfoSync()
 			this.windowHeight = info.windowHeight
 			this.windowWidth = info.windowWidth
-			const markers = uni.getStorageSync('markers');
-			this.markers = JSON.parse(markers)
+			this.markers = uni.getStorageSync('markers');
 		},
 		methods: {
 			aaatap(e){

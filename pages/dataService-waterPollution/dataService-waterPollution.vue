@@ -4,12 +4,13 @@
 			<!-- 标题 -->
 			<view class="top">
 				<image src="/static/icon/back.png" class="img" @tap="back"></image>
-				<view>水污染检测</view>
-				<image src="/static/icon/Sort.png" class="img"></image>
+				<view>水质监测</view>
+				<view></view>
+				<!-- <image src="/static/icon/Sort.png" class="img"></image> -->
 			</view>
 			<view class="tatle-header">
-				<view>检测时间</view>
-				<view>化学需氧量</view>
+				<view>监测时间</view>
+				<view>高锰酸盐</view>
 				<view>氨氮</view>
 				<view>总磷</view>
 				<view>溶解氧</view>
@@ -20,7 +21,7 @@
 				<view class="company">{{item.MONITORTIME}}</view>
 				<view class="content">
 					<view class="item">
-						<view class="_item">{{item.DDL}}</view>
+						<view class="_item">{{item.GMSYZS}}</view>
 						<view class="_item">{{item.AD}}</view>
 						<view class="_item">{{item.ZL}}</view>
 						<view class="_item">{{item.RJY}}</view>

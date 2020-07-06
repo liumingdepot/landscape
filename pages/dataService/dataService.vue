@@ -1,8 +1,8 @@
 <template>
 	<view class="dataService">
-		<!-- AQL -->
+		<!-- AQI -->
 		<view class="title">
-			<view>铜川市AQL</view>
+			<view>铜川市AQI</view>
 			<view style="color: #488df2;" @tap="navTo('dataService-aql')">站点数据</view>
 		</view>
 		<view class="gauge">
@@ -47,13 +47,13 @@
 
 		<view class="waterPollution">
 			<view class="title2">
-				<view>水污染检测</view>
+				<view>水质监测</view>
 				<view style="color: #488df2;" @tap="navTo('dataService-waterPollution')">更多</view>
 			</view>
 			<view class="grid">
 				<view class="item">名称</view>
 				<view class="item">河流</view>
-				<view class="item">岔口</view>
+				<view class="item">断面</view>
 				<view class="item">{{waterPollution.AREANAME}}</view>
 				<view class="item">{{waterPollution.RIVERNAME}}</view>
 				<view class="item">{{waterPollution.MNNAME}}</view>
@@ -98,8 +98,7 @@
 			this.screenWidth = info.screenWidth
 			const date = new Date()
 			this.date = date.toLocaleDateString()
-			const waterPollution = await findWaterautoHourdata()
-			this.waterPollution = waterPollution[0]
+			this.waterPollution = await findWaterautoHourdata()
 		},
 		onShow() {
 			this.getWeather()
@@ -121,7 +120,7 @@
 						color: '#eaeaea'
 					}],
 					series: [{
-						name: 'AQL空气质量',
+						name: 'AQI空气质量',
 						data: data.AQI / 500,
 						num: data.AQI
 					}]
@@ -366,24 +365,16 @@
 					border: 1rpx solid #e1e1e1;
 
 					&:nth-of-type(1),
+					&:nth-of-type(2),
+					&:nth-of-type(3),
+					&:nth-of-type(7),
 					&:nth-of-type(8),
+					&:nth-of-type(9),
+					&:nth-of-type(13),
+					&:nth-of-type(14),
 					&:nth-of-type(15),{
 						line-height: 58rpx;
 						border-top: 6rpx solid #6dcd0a;
-					}
-
-					&:nth-of-type(2),
-					&:nth-of-type(9),
-					&:nth-of-type(13){
-						line-height: 58rpx;
-						border-top: 6rpx solid #f54949;
-					}
-
-					&:nth-of-type(3),
-					&:nth-of-type(7),
-					&:nth-of-type(14){
-						line-height: 58rpx;
-						border-top: 6rpx solid #808080;
 					}
 				}
 			}

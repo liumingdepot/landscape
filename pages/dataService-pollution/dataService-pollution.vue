@@ -5,7 +5,8 @@
 			<view class="top">
 				<image src="/static/icon/back.png" class="img" @tap="back"></image>
 				<view>企业污染源数据</view>
-				<image src="/static/icon/Sort.png" class="img"></image>
+				<view></view>
+				<!-- <image src="/static/icon/Sort.png" class="img"></image> -->
 			</view>
 			<!-- 选项卡 -->
 			<view class="nav">
@@ -13,7 +14,7 @@
 					<view class="tag" :class="tag == 0 ? 'active-tag':''" @click="changeTag(0)">污水企业</view>
 					<view class="tag" :class="tag == 1 ? 'active-tag':''" @click="changeTag(1)">废气企业</view>
 				</view>
-				<view class="text">{{tag == 0?'单位 mg/m3':'单位 mk/m3'}}</view>
+				<view class="text">{{tag == 0?'单位 mg/L':'单位 mg/m&sup3;'}}</view>
 			</view>
 			<!-- 表头 -->
 			<view class="tatle-header">
@@ -21,7 +22,7 @@
 				<view>排口</view>
 				<view>{{tag == 0 ?'氨氮':'烟尘'}}</view>
 				<view>{{tag == 0 ?'化学需氧量':'氮氧化物'}}</view>
-				<view>{{tag == 0 ?'化学需氧量':'SO2'}}</view>
+				<view>{{tag == 0 ?'化学需氧量':'SO&sup2;'}}</view>
 			</view>
 		</view>
 		<view class="main">

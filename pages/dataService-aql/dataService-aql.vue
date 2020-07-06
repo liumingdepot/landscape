@@ -4,21 +4,22 @@
 			<!-- 标题 -->
 			<view class="top">
 				<image src="/static/icon/back.png" class="img" @tap="back"></image>
-				<view>AQL站点数据</view>
-				<image src="/static/icon/Sort.png" class="img"></image>
+				<view>AQI站点数据</view>
+				<view></view>
+				<!-- <image src="/static/icon/Sort.png" class="img"></image> -->
 			</view>
 			<!-- 表头 -->
 			<view class="tatle-header">
 				<view>站点名称</view>
-				<view>AQL</view>
+				<view>AQI</view>
 				<view>等级</view>
 				<view>PM2.5</view>
 				<view>PM10</view>
 				<view></view>
-				<view>SO2</view>
-				<view>NO2</view>
+				<view>SO&sup2;</view>
+				<view>NO&sup2;</view>
 				<view>CO</view>
-				<view>O3</view>
+				<view>O&sup3;</view>
 			</view>
 		</view>
 		<view class="main">

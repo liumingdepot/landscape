@@ -32,9 +32,13 @@
 				borderColor1:'#e5e5e5',
 				borderColor2:'#e5e5e5',
 				type:'password',
-				username: uni.getStorageSync('username'),
-				password: uni.getStorageSync('password'),
+				username: '',
+				password: '',
 			};
+		},
+		onLoad() {
+			this.username = uni.getStorageSync('username');
+			this.password = uni.getStorageSync('password');
 		},
 		methods: {
 			applogin() {
@@ -55,7 +59,7 @@
 						})
 					} else {
 						uni.showToast({
-							title: res.msg,
+							title: res.msg||'服务器错误，请稍后重试',
 							icon: 'none'
 						})
 					}

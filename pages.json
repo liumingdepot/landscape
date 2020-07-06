@@ -92,7 +92,13 @@
 			}
 		}
 
-	],
+	    ,{
+            "path" : "pages/dataService-waterPollution/dataService-waterPollution",
+            "style" : {
+				"navigationStyle": "custom"
+			}
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "",

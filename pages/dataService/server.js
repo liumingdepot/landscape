@@ -14,3 +14,10 @@ export const fqOnlineJson =  async () =>{
 	})
 	return res.data
 }
+
+export const findWaterautoHourdata =  async () =>{
+	const res = await get({
+		url:'commonservice-system/swagger2/say/findWaterautoHourZuixindata',
+	})
+	return res.data
+}

@@ -47,8 +47,7 @@ export const post = async ({
 	parames
 }) => {
 	const header = parames ? {
-		"Content-Type": "application/x-www-form-urlencoded",
-		"liuming":'liuming'
+		"Content-Type": "application/x-www-form-urlencoded"
 	} : {};
 	const dataValue = data ? data : parames
 	const [err, res] = await axios({

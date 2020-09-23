@@ -7,7 +7,7 @@
 		</view>
 		<view class="gauge">
 			<u-charts v-if="gauge" chartType="gauge" :chartData="chartData" canvasId="gauge" :cWidth="screenWidth" cHeight="230"
-			 :opts="{}" />
+			 :opts="opts" />
 			<view class="level level1" v-if="QUALITY.includes('优')">{{QUALITY}}</view>
 			<view class="level level2" v-else-if="QUALITY.includes('良')">{{QUALITY}}</view>
 			<view class="level level3" v-else-if="QUALITY.includes('中')">{{QUALITY}}</view>
@@ -90,7 +90,8 @@
 				today: {},
 				weather: [],
 				date: '',
-				waterPollution: {}
+				waterPollution: {},
+				opts:{}
 			};
 		},
 		async onLoad() {
